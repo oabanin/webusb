@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     output: 'export',
-    basePath: '/webusb',
+    basePath: process.env.NODE_ENV === 'development' ? '':'/webusb',
 }
 
 module.exports = nextConfig
